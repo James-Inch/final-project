@@ -4,7 +4,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var request = require('request');
 var exphbs = require("express-handlebars");
-
+var path = require("path")
 
 // Scrapping tools Axios for the http request and cheerio to pull out the html elements 
 var axios = require("axios");
@@ -24,14 +24,16 @@ var app = express();
 app.use(logger("dev"));
 // Use body-parser for handling form submissions 
 app.use(bodyParser.urlencoded({ extended: true }));
+// Handlebars config
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 // Use express.static to serve the public directory
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Connect to the Mongo db 
 mongoose.connect("mongodb://localhost/finalProject", { useNewUrlParser: true });
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+
 
 // Routes
 
