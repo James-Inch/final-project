@@ -95,7 +95,7 @@ request("https://api.edamam.com/api/food-database/parser?ingr=red%20apple&app_id
     var foodJSON = JSON.parse(body);
 
 
-    console.log(foodJSON.parsed);
+    console.log(foodJSON.parsed[0]);
 });
 
 // Call to unsplash api 
