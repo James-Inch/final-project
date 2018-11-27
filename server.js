@@ -41,6 +41,18 @@ app.get("/", function (req, res) {
     res.render("index");
 });
 
+app.get("/training", function (req, res) {
+    res.render("training");
+});
+
+app.get("/nutrition", function (req, res) {
+    res.render("nutrition");
+});
+
+app.get("/pictures", function (req, res) {
+    res.render("pictures");
+});
+
 axios.get("https://www.climbing.com/").then(function (response) {
 
     // Load the HTML into cheerio and save it to a variable
@@ -73,12 +85,12 @@ axios.get("https://www.climbing.com/").then(function (response) {
     console.log(results);
 });
 
+// Call to edamam api
 request("https://api.edamam.com/api/food-database/parser?ingr=red%20apple&app_id=f3039ebd&app_key=6ff5049390195df5a37b9a49ee20b496", function (error, response, body) {
     // Print the error if one occurred
     console.log("error:", error);
     // Print the response status code if a response was received
     console.log("statusCode:", response && response.statusCode);
-    // Print the HTML for Api results.
 
     var foodJSON = JSON.parse(body);
 
@@ -86,6 +98,7 @@ request("https://api.edamam.com/api/food-database/parser?ingr=red%20apple&app_id
     console.log(foodJSON.parsed);
 });
 
+// Call to unsplash api 
 request("https://api.unsplash.com/search/photos?page=1&query=climbing&client_id=df6fa40d96023b55b6da717b4dc8d507d61a6ec61de6031ea07002ce10626c2e", function(error, response, body){
     console.log("error:", error);
     console.log("statusCode:", response && response.statusCode);

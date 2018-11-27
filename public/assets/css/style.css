@@ -80,6 +80,14 @@ section.sec1 {
     background-position: center;
 }
 
+section.sec2 {
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/images/landingPic.png.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 .content {
     margin-top: 80px;
 }
