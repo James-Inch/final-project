@@ -73,17 +73,26 @@ axios.get("https://www.climbing.com/").then(function (response) {
     console.log(results);
 });
 
-request('https://api.edamam.com/api/food-database/parser?ingr=red%20apple&app_id=f3039ebd&app_key=6ff5049390195df5a37b9a49ee20b496', function (error, response, body) {
+request("https://api.edamam.com/api/food-database/parser?ingr=red%20apple&app_id=f3039ebd&app_key=6ff5049390195df5a37b9a49ee20b496", function (error, response, body) {
     // Print the error if one occurred
-    console.log('error:', error);
+    console.log("error:", error);
     // Print the response status code if a response was received
-    console.log('statusCode:', response && response.statusCode);
+    console.log("statusCode:", response && response.statusCode);
     // Print the HTML for Api results.
 
-    var json = JSON.parse(body);
+    var foodJSON = JSON.parse(body);
 
 
-    console.log(json.parsed);
+    console.log(foodJSON.parsed);
+});
+
+request("https://api.unsplash.com/search/photos?page=1&query=climbing&client_id=df6fa40d96023b55b6da717b4dc8d507d61a6ec61de6031ea07002ce10626c2e", function(error, response, body){
+    console.log("error:", error);
+    console.log("statusCode:", response && response.statusCode);
+
+    var photoJSON = JSON.parse(body);
+    // Returns first photo's url 
+    console.log(photoJSON.results[0].urls.raw);
 });
 
 // Start the server
