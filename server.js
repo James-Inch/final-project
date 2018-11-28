@@ -4,7 +4,8 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var request = require('request');
 var exphbs = require("express-handlebars");
-var path = require("path")
+var path = require("path");
+
 
 // Scrapping tools Axios for the http request and cheerio to pull out the html elements 
 var axios = require("axios");
