@@ -1,0 +1,10 @@
+.content {
+    margin-top: 80px;
+}
+
+.content p {
+    width: 900px;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 30px;
+}
