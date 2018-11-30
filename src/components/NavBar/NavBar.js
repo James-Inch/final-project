@@ -7,16 +7,16 @@ const NavBar = () => (
         <div className="logo">Climb BETA</div>
         <ul>
             <li>
-                <a href="https://github.com/James-Inch">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
-                <a href="https://github.com/James-Inch">Training</a>
+                <a href="/Training">Training</a>
             </li>
             <li>
-                <a href="https://github.com/James-Inch">Nutrition</a>
+                <a href="/Nutrition">Nutrition</a>
             </li>
             <li>
-                <a href="https://github.com/James-Inch">Pictures</a>
+                <a href="/Pictures">Pictures</a>
             </li>
             <li>
                 <a className="active" href="https://github.com/James-Inch">Log in</a>
