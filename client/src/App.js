@@ -7,6 +7,8 @@ import Nutrition from "./pages/Nutrition";
 import Pictures from "./pages/Pictures";
 import Training from "./pages/Training";
 
+
+
 const App = () => (
     <Router>
         <div className="container">
