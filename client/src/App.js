@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Nutrition from "./pages/Nutrition";
 import Pictures from "./pages/Pictures";
 import Training from "./pages/Training";
+import Login from "./pages/Login";
 
 
 
@@ -19,6 +20,7 @@ const App = () => (
                     <Route exact path="/Nutrition" component={Nutrition} />
                     <Route exact path="/Pictures" component={Pictures} />
                     <Route exact path="/Training" component={Training} />
+                    <Route exact path="/Login" component={Login} />
                 </Switch>
         </div>
     </Router>

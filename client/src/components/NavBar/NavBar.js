@@ -19,7 +19,7 @@ const NavBar = () => (
                 <a href="/Pictures">Pictures</a>
             </li>
             <li>
-                <a className="active" href="https://github.com/James-Inch">Log in</a>
+                <a className="active" href="/Login">Log in</a>
             </li>
         </ul>
     </nav>
