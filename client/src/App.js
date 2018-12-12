@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
 import BackGround from "./components/BackGround";
 import Home from "./pages/Home";
@@ -8,8 +9,6 @@ import Pictures from "./pages/Pictures";
 import Training from "./pages/Training";
 import Login from "./pages/Login";
 
-
-
 const App = () => (
     <Router>
         <div className="container">
@@ -17,10 +16,10 @@ const App = () => (
             <BackGround />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/Nutrition" component={Nutrition} />
-                    <Route exact path="/Pictures" component={Pictures} />
-                    <Route exact path="/Training" component={Training} />
-                    <Route exact path="/Login" component={Login} />
+                    <Route exact path="/nutrition" component={Nutrition} />
+                    <Route exact path="/pictures" component={Pictures} />
+                    <Route exact path="/training" component={Training} />
+                    <Route exact path="/login" component={Login} />
                 </Switch>
         </div>
     </Router>
