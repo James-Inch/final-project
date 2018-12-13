@@ -10,6 +10,7 @@ import Pictures from "./pages/Pictures";
 import Training from "./pages/Training";
 import LoginPage from "./pages/LoginPage";
 
+
 class App extends Component {
     state = {
         token: Auth.getToken()
@@ -29,7 +30,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="container">
-                    <NavBar />
+                    <NavBar token={this.state.token} />
                     <BackGround />
                     <Switch>
                         <Route exact path="/" component={Home} />
