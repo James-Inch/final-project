@@ -15,13 +15,10 @@ class ScrapedContainer extends Component {
     componentDidMount() {
         axios.get("http://www.thrashermagazine.com/")
             .then(response => {
-                // Then, we load that into cheerio and save it to $ for a shorthand selector
                 const $ = cheerio.load(response.data);
-
                 let results = [];
-                // Now, we grab every h2 within an article tag, and do the following:
+
                 $("h4.post-title").each(function (i, element) {
-                    // Save an empty result object
 
                     let title = $(this).children("a").text();
                     let link = $(this).children("a").attr("href");
@@ -47,7 +44,7 @@ class ScrapedContainer extends Component {
                     <ul>
                        {this.state.results.map((result, index) => (
                        <li>{result.title}</li>
-                       ))};
+                       ))}
                     </ul>
                 </section>
             )

@@ -3,26 +3,35 @@ import React, { Component } from "react";
 import API from "../utils/API";
 
 class Banner extends Component {
-    state = {
-        message: ""
+    constructor(props) {
+        super(props);
+        this.state = {
+            articles: []
+        }
     }
 
     componentDidMount() {
-        API.getMessage(this.props.token)
+        API.getArticles()
             .then(res => res.json())
-            .then(data => {
-                this.setState({ message: data.message })
+            .then(articles => {
+                console.log(articles);
+                this.setState(articles);
             });
     }
 
     render() {
-        return (
-            <div className="Banner">
-                <div className="message">
-                    {this.state.message}
+        return this.state.articles.length === 0 ? <div>Loading...</div> :
+            (
+                <div className="Banner">
+                    <section className="content">
+                        <ul>
+                            {this.state.articles.map((article, index) => (
+                                <li>{article.title}</li>
+                            ))}
+                        </ul>
+                    </section>
                 </div>
-            </div>
-        )
+            )
     }
 }
 

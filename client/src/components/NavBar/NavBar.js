@@ -22,7 +22,7 @@ const NavBar = props => (
                 </li>
                 <li>
                    { props.token ?
-                    <a className="active" onClick={() => Auth.logout()}>Logout</a> :
+                    <a className="active"  href="/Login" onClick={() => Auth.logout()}>Logout</a> :
                     <a className="active" href="/Login">Log in</a>
                     }
             </li>

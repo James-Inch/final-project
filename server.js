@@ -4,6 +4,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const jwt = require('jsonwebtoken');
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 const db = require("./models");
 const passport = require("./utils/passport");
@@ -48,14 +50,47 @@ app.post("/login", (req, res) => {
     .catch(err => console.log(err));
 });
 
+app.get("/api/articles", (req, res) => {
+  axios.get("https://www.climbing.com/").then(function (response) {
+
+    // Load the HTML into cheerio and save it to a variable
+    // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+    // console.log(response.data);
+    const $ = cheerio.load(response.data);
+
+    // An empty array to save the data that we'll scrape
+    var results = [];
+
+    // With cheerio, find each p-tag with the "title" class
+    // (i: iterator. element: the current element)
+    $("div.l-grid--item").each(function (i, element) {
+
+      // Save the text of the element in a "title" variable
+      var title = $(element).text();
+
+      // In the currently selected element, look at its child elements (i.e., its a-tags),
+      // then save the values for any "href" attributes that the child elements may have
+      var link = $(element).children().attr("href");
+
+      // Save these results in an object that we'll push into the results array we defined earlier
+      results.push({
+        title: title,
+        link: link
+      });
+      
+    });
+    res.json(results);
+  });
+});
+
 
 // Define API routes here
 app.get("/api/test", passport.authenticate("jwt", { session: false }), (req, res) => {
   res.send("It's working!!!");
 });
 
-app.get("/api/message", passport.authenticate("jwt", { session: false}), (req, res) => {
-  res.json({ message: "Hello world"});
+app.get("/api/message", passport.authenticate("jwt", { session: false }), (req, res) => {
+  res.json({ message: "Hello world" });
 });
 
 // Send every other request to the React app

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import ScrapedContainer from "../../components/ScrapedContainer";
+import Banner from "../../components/Banner";
 
 class Home extends Component {
     render() {
         return (
-            <ScrapedContainer />
+            <div>
+                <Banner />
+            </div>
+                       
         );
     };
 };
