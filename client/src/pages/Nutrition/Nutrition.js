@@ -6,7 +6,7 @@ class Nutrition extends Component {
     render() {
         return (
             <div>
-                <h1>dis the Nut page</h1>
+                <h1>dis the Nutrition page</h1>
             </div>
         );
     };

@@ -1,8 +1,12 @@
 .content {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .content ul {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
     width: 900px;
     margin: 30px auto;
     font-size: 20px;
