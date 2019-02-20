@@ -9,6 +9,7 @@ import Nutrition from "./pages/Nutrition";
 import Pictures from "./pages/Pictures";
 import Training from "./pages/Training";
 import LoginPage from "./pages/LoginPage";
+import Footer from "./components/Footer";
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
                         <PrivateRoute exact path="/training" component={Training} token={this.state.token} />
                         <Route exact path="/login" component={LoginPage} />
                     </Switch>
+                    <Footer />
                 </div>
             </Router>
         );
