@@ -2,8 +2,8 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => (
-    <footer id="footer">
-    <h3>Published by: James Inch</h3>
+    <footer>
+    <p>Published by: James Inch</p>
     </footer>
 )
 
