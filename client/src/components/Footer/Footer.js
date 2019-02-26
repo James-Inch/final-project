@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => (
     <footer>
-    <p>Published by: James Inch</p>
+        <a href="https://james-inch.github.io/responsive-portfolio/" target="blank">Published by: James Inch</a>
     </footer>
 )
 

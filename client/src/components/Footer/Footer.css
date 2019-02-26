@@ -1,14 +1,14 @@
 footer {
     text-align: right;
     font-size: 20px;
-    opacity: 0.85;
     margin: 0 auto;
     padding: 30px 70px 30px 30px;
-    color: #fff;
-    background: rgba(0,0,0,1);  
+    background: rgba(0,0,0,0.8);  
 }
 
-footer p {
+footer a {
+    text-decoration: none;
+    color: #fff;
     background: #ce0202;
     padding: 12px 30px;
     display: inline;
