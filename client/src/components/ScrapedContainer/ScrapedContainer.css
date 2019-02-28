@@ -1,15 +1,21 @@
-.content {
-    margin-top: 50px;
-}
-
 .content ul {
     background-color: lightgray;
     padding: 20px;
     text-align: center;
     list-style-type: none;
     width: 900px;
-    margin: 30px auto;
+    margin: 50px auto;
     font-size: 20px;
     line-height: 30px;
-    opacity: 0.5;
+    opacity: 0.8;
+    border-left: 10px solid #ce0202;
+    border-top: 5px solid #ce0202;
+}
+
+.content ul li {
+    padding: 10px;
+    border: 2px solid black;
+
+    border-color: black;
+    margin: 5px;
 }

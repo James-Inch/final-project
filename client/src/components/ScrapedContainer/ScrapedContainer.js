@@ -43,7 +43,7 @@ class ScrapedContainer extends Component {
                 <section className="content">
                     <ul>
                        {this.state.results.map((result, index) => (
-                       <li>{result.title} <br /> <hr /> </li>
+                       <li>{result.title}</li>
                        ))}
                     </ul>
                 </section>

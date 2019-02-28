@@ -43,7 +43,7 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div>
+            <div id="formContainer">
                 <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="email" placeholder="Email" onChange={this.handleInputChange} />
