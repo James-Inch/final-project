@@ -13,3 +13,10 @@
     line-height: 30px;
     opacity: 0.5;
 }
+
+.content ul li {
+    padding: 10px;
+    background: #ce0202;
+    border: 2px;
+    border-color: black;
+}
