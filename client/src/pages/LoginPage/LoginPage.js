@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Auth from "../utils/auth";
+import "./LoginPage.css";
+import Auth from "../../utils/auth";
 
 class LoginPage extends Component {
     state = {
