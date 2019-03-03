@@ -1,0 +1,32 @@
+#formContainer {
+    margin: 40px auto;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    background: lightgray;
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#formContainer input {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 6PX;
+    font-family: inherit;
+}
+
+#formContainer button {
+    background: #ce0202;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 0;
+    width: 40%;
+    cursor: pointer;
+    font-family: inherit;
+}
