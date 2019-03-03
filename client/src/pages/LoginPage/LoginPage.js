@@ -44,11 +44,10 @@ class LoginPage extends Component {
     render() {
         return (
             <div id="formContainer">
-                <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="email" placeholder="Email" onChange={this.handleInputChange} />
-                    <input type="password" name="password" placeholder="Password" onChange={this.handleInputChange} />
-                    <button>Login</button>
+                    <input type="text" name="email" placeholder="Email..." onChange={this.handleInputChange} />
+                    <input type="password" name="password" placeholder="Password..." onChange={this.handleInputChange} />
+                    <button>Log in</button>
                 </form>
             </div>
         );
