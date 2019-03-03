@@ -17,6 +17,7 @@
     border: none;
     border-radius: 6PX;
     font-family: inherit;
+    font-size: 15px;
 }
 
 #formContainer button {
@@ -29,4 +30,5 @@
     width: 40%;
     cursor: pointer;
     font-family: inherit;
+    font-size: 15px;
 }
