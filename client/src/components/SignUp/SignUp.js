@@ -1,8 +1,12 @@
-import React, { component } from "react";
+import React, { Component } from "react";
 import "./SignUp.css";
 
 class SignUp extends Component {
-    
+    state = {
+        email: "",
+        password: "",
+        rePassword: ""
+    }
     
     
     
@@ -15,7 +19,7 @@ class SignUp extends Component {
                     <input type="password" name="rePassword" placeholder="Re-enter Password..." />
                 </form>
             </div>
-        )
+        );
     }
 }
 
